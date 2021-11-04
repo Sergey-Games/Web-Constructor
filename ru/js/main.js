@@ -109,7 +109,7 @@ const createMain = ({title, main: { genre, rating, description, trailer, slider 
 			const star = getElement('img', ['star'], {
 				// Работа с тернарным оператором.
 				alt: i ? '' : `Рейтинг ${rating} из 10`,
-				src: i < rating ? '/img/star.svg' : '/img/star-o.svg'
+				src: i < rating ? '/Web-Constructor/img/star.svg' : '/Web-Constructor/img/star-o.svg'
 			});
 			ratingStars.append(star);
 		}
@@ -137,7 +137,7 @@ const createMain = ({title, main: { genre, rating, description, trailer, slider 
 		});
 
 		const iconPlay = getElement('img', ['play-img'], {
-			src: '/img/play.svg',
+			src: '/Web-Constructor/img/play.svg',
 			alt: '',
 			ariaHiddden: true,
 		});
