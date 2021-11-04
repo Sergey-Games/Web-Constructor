@@ -1,13 +1,18 @@
+// Функция обработчик.
 const getElement = (tagName, classNames, attributes)=> {
 
 	const element = document.createElement(tagName);
 
+	// Для элемента, мы добавляем класс.
 	if(classNames) {
-		element.classList.add(...classNames); 
+		element.classList.add(...classNames); // При помощи Spread Operator, все классы мы раскидаем.
 	}
 
+	// Перебираем атрибуты.
 	if(attributes) {
 		for(const attribute in attributes) {
+			// Для нашего элемента, будем обращаться к этому атрибуту.
+			// Туда будем сдавать значения, которые беруться из объекта.
 			element[attribute] = attributes[attribute];
 		}
 	}
@@ -15,6 +20,7 @@ const getElement = (tagName, classNames, attributes)=> {
 	return element;
 };
 
+// Создаёт header.
 const createHeader = ({title, header: {logo, menu, social} }) => {
 
 	const header = getElement('header');
@@ -24,7 +30,7 @@ const createHeader = ({title, header: {logo, menu, social} }) => {
 	if(logo) {
 		const logoElem = getElement('img', ['logo'], {
 			src: logo,
-			alt: 'Logo ' + title,
+			alt: 'Логотип ' + title,
 		});
 
 		wrapper.append(logoElem);
@@ -75,6 +81,7 @@ const createHeader = ({title, header: {logo, menu, social} }) => {
 	return header;
 };
 
+// Создаёт main.
 const createMain = ({title, main: { genre, rating, description, trailer, slider }}) => {
 
 	const main = getElement('main');
@@ -86,7 +93,9 @@ const createMain = ({title, main: { genre, rating, description, trailer, slider 
 	wrapper.append(content);
 
 	if(genre) {
+		// Создаём genreSpan.
 		const genreSpan = getElement('span', ['genre','animated','fadeInRight'], {textContent: genre} );
+		// Добавляем genreSpan на страницу.
 		content.append(genreSpan);
 	}
 
@@ -98,8 +107,9 @@ const createMain = ({title, main: { genre, rating, description, trailer, slider 
 		});
 		for(let i = 0; i < 10; i++) {
 			const star = getElement('img', ['star'], {
-				alt: i ? '' : `Rating ${rating} из 10`,
-				src: i < rating ? 'img/star.svg' : 'img/star-o.svg'
+				// Работа с тернарным оператором.
+				alt: i ? '' : `Рейтинг ${rating} из 10`,
+				src: i < rating ? '/img/star.svg' : '/img/star-o.svg'
 			});
 			ratingStars.append(star);
 		}
@@ -118,16 +128,16 @@ const createMain = ({title, main: { genre, rating, description, trailer, slider 
 	if (trailer) {
 		const youtubeLink = getElement('a', ['button', 'animated', 'fadeInRight', 'youtube-modal'], {
 			href: trailer,
-			textContent: 'Watch the trailer',
+			textContent: 'Смотреть трейлер',
 		})
 
 		const youtubeImageLink = getElement('a', ['play','youtube-modal'], {
 			href: trailer,
-			ariaLabel: 'Watch the trailer'
+			ariaLabel: 'Смотреть трейлер'
 		});
 
 		const iconPlay = getElement('img', ['play-img'], {
-			src: 'img/play.svg',
+			src: '/img/play.svg',
 			alt: '',
 			ariaHiddden: true,
 		});
@@ -193,6 +203,7 @@ const createMain = ({title, main: { genre, rating, description, trailer, slider 
 	return main;
 };
 
+// создаёт footer.
 const createFooter = ({footer: {copyright, menu}}) => {
 
 	const footer = getElement('footer', ['footer'] );
@@ -229,6 +240,7 @@ const createFooter = ({footer: {copyright, menu}}) => {
 
 const movieConstructor = (selector, options) => {
 	
+	// получаем селектор app.
 	const app = document.querySelector(selector);
 	app.classList.add('body-app');
 	
@@ -243,33 +255,46 @@ const movieConstructor = (selector, options) => {
 
 	if (options.favicon){
 
+		// const index = options.favicon.lastIndexOf('.') + 1;
+		// const type = options.favicon.substring(index);
+
+		// он ищёт точку
+		// если находит, то возвращает индекс
 		const index = options.favicon.lastIndexOf('.');
+		// получаем type, находим через index
+		// + 1 обозначает, что нам точка не нужна
 		const type = options.favicon.substring(index + 1);
 		
 		const favicon = getElement('link', null, {
 			rel: 'icon',
 			href: options.favicon,
-			type: 'image/' + (type === 'svg' ? 'svg-xml' : type),
+			type: '/image/' + (type === 'svg' ? 'svg-xml' : type), // проверяем, через тернарный оператор.
 		});
-		document.head.append(favicon);
+		document.head.append(favicon); // вставляем favicon на страницу сайта
 	}
 
+	// при помощи тернарного оператора, мы проверяем наличие background в options.
+	// если есть, то мы получаем url("${options.background}"), если нет, то пустоту.
 	app.style.backgroundImage = options.background ? 
 		`url("${options.background}")` : '';
 	document.title = options.title;
 
+	// получает всё, что создаёт createHeader.
 	if(options.header){
 		app.append(createHeader(options));
 	}
 
+	// получает всё, что создаёт createMain.
 	if(options.main){
 		app.append(createMain(options));
 	}
 
+	// получает всё, что создаёт createFooter.
 	if(options.footer){
 		app.append(createFooter(options));
 	}
 
 };
 
+// получаем в реальном времени сегодняшний год.
 const DateYear = new Date().getFullYear();

@@ -1,5 +1,5 @@
 movieConstructor('.app',{
-	title: 'Ведьмак',
+	title: 'The Witcher',
 	favicon: 'witcher/logo.png',
 	background: 'witcher/background.jpg',
 	fontColor: '#ffffff',
@@ -22,72 +22,77 @@ movieConstructor('.app',{
 				title: 'Facebook',
 				link: '#',
 				image: 'witcher/social/facebook.svg',
-			}		
+			},
+			{
+				title: 'English',
+				link: '/ru/',
+				image: 'witcher/social/language.png',
+			}				
 		],
 		menu:[
 			{
-				title: 'Главная',
+				title: 'Main',
 				link:'#',
 			},
 			{
-				title: 'Описание',
+				title: 'Description',
 				link:'#',
 			},
 			{
-				title: 'Трейлер',
+				title: 'Trailer',
 				link:'#',
 			},
 			{
-				title: 'Отзывы',
+				title: 'Reviews',
 				link: '#',
 			},
 		]
 	},
 	main : {
-		genre: '2019, фэнтези',
+		genre: '2019, Fantasy',
 		rating: '8',
-		description: 'Ведьмак Геральт, мутант и убийца чудовищ, на своей верной лошади по кличке Плотва путешествует по Континенту. За тугой мешочек чеканных монет этот мужчина избавит вас от всякой настырной нечисти — хоть от чудищ болотных, оборотней и даже заколдованных принцесс.',
-		trailer: 'https://www.youtube.com/watch?v=P0oJqfLzZzQ',
+		description: 'Geralt of Rivia, a mutated monster-hunter for hire, journeys toward his destiny in a turbulent world where people often prove more wicked than beasts.',
+		trailer: '#',
 		slider: [
 			{
 				img: 'witcher/series/series-1.jpg',
-				title:'Начало конца',
-				subtitle:'Серия №1',
+				title:'The End’s Beginning',
+				subtitle:'Series №1',
 			},
 			{
 				img: 'witcher/series/series-2.jpg',
-				title:'Четыре марки',
-				subtitle:'Серия №2',
+				title:'Four Marks',
+				subtitle:'Series №2',
 			},
 			{
 				img: 'witcher/series/series-3.jpg',
-				title:'Предательская луна',
-				subtitle:'Серия №3',
+				title:'Betrayer Moon',
+				subtitle:'Series №3',
 			},
 			{
 				img: 'witcher/series/series-4.jpg',
-				title:'Банкеты, ублюдки и похороны',
-				subtitle:'Серия №4',
+				title:'Of Banquets, Bastards and Burials',
+				subtitle:'Series №4',
 			},
 			{
 				img: 'witcher/series/series-5.jpg',
-				title:'Разлитые по бутылкам аппетиты',
-				subtitle:'Серия №5',
+				title:'Bottled Appetites',
+				subtitle:'Series №5',
 			},
 			{
 				img: 'witcher/series/series-6.jpg',
-				title:'Редкие виды',
-				subtitle:'Серия №6',
+				title:'Rare Species',
+				subtitle:'Series №6',
 			},
 			{
 				img: 'witcher/series/series-7.jpg',
-				title:'Перед падением',
-				subtitle:'Серия №7',
+				title:'Before a Fall',
+				subtitle:'Series №7',
 			},
 			{
 				img: 'witcher/series/series-8.jpg',
-				title:'Гораздо больше',
-				subtitle:'Серия №8',
+				title:'Much More',
+				subtitle:'Series №8',
 			}
 		]
 	},
