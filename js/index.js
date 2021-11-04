@@ -25,7 +25,7 @@ movieConstructor('.app',{
 			},
 			{
 				title: 'English',
-				link: '/ru/',
+				link: '/Web-Constructor/ru/',
 				image: 'witcher/social/language.png',
 			}				
 		],

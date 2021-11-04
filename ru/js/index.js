@@ -1,32 +1,32 @@
 movieConstructor('.app',{
 	title: 'Ведьмак',
-	favicon: '/witcher/logo.png',
-	background: '/witcher/background.jpg',
+	favicon: '/Web-Constructor/witcher/logo.png',
+	background: '/Web-Constructor/witcher/background.jpg',
 	fontColor: '#ffffff',
 	backgroundColor: '#141218',
 	objectСolor: '#9D2929',
 	header: {
-		logo: '/witcher/logo.png',
+		logo: '/Web-Constructor/witcher/logo.png',
 		social:[
 			{
 				title: 'Twitter',
 				link: '#',
-				image: '/witcher/social/twitter.svg',
+				image: '/Web-Constructor/witcher/social/twitter.svg',
 			},
 			{
 				title: 'Instagram',
 				link: '#',
-				image: '/witcher/social/instagram.svg',
+				image: '/Web-Constructor/witcher/social/instagram.svg',
 			},
 			{
 				title: 'Facebook',
 				link: '#',
-				image: '/witcher/social/facebook.svg',
+				image: '/Web-Constructor/witcher/social/facebook.svg',
 			},
 {
 				title: 'Русский',
-				link: '/',
-				image: '/witcher/social/language.png',
+				link: '/Web-Constructor/',
+				image: '/Web-Constructor/witcher/social/language.png',
 			}		
 		],
 		menu:[
@@ -55,42 +55,42 @@ movieConstructor('.app',{
 		trailer: '#',
 		slider: [
 			{
-				img: '/witcher/series/series-1.jpg',
+				img: '/Web-Constructor/witcher/series/series-1.jpg',
 				title:'Начало конца',
 				subtitle:'Серия №1',
 			},
 			{
-				img: '/witcher/series/series-2.jpg',
+				img: '/Web-Constructor/witcher/series/series-2.jpg',
 				title:'Четыре марки',
 				subtitle:'Серия №2',
 			},
 			{
-				img: '/witcher/series/series-3.jpg',
+				img: '/Web-Constructor/witcher/series/series-3.jpg',
 				title:'Предательская луна',
 				subtitle:'Серия №3',
 			},
 			{
-				img: '/witcher/series/series-4.jpg',
+				img: '/Web-Constructor/witcher/series/series-4.jpg',
 				title:'Банкеты, ублюдки и похороны',
 				subtitle:'Серия №4',
 			},
 			{
-				img: '/witcher/series/series-5.jpg',
+				img: '/Web-Constructor/witcher/series/series-5.jpg',
 				title:'Разлитые по бутылкам аппетиты',
 				subtitle:'Серия №5',
 			},
 			{
-				img: '/witcher/series/series-6.jpg',
+				img: '/Web-Constructor/witcher/series/series-6.jpg',
 				title:'Редкие виды',
 				subtitle:'Серия №6',
 			},
 			{
-				img: '/witcher/series/series-7.jpg',
+				img: '/Web-Constructor/witcher/series/series-7.jpg',
 				title:'Перед падением',
 				subtitle:'Серия №7',
 			},
 			{
-				img: '/witcher/series/series-8.jpg',
+				img: '/Web-Constructor/witcher/series/series-8.jpg',
 				title:'Гораздо больше',
 				subtitle:'Серия №8',
 			}
